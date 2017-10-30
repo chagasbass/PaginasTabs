@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PaginasTabs.TabPageCentral"
+            xmlns:local="clr-namespace:PaginasTabs"
+            Title="Exemplo de Tabs">
+
+
+    <local:Tab1 Title="Tab1" />
+    <local:Tab2 Title="Tab2"/>
+
+</TabbedPage>

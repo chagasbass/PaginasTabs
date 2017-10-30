@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PaginasTabs.MenuHamburguerPage"
+             Title="Tabs"
+             BackgroundColor="#2196f3"
+             Icon="ic_menu_white_24dp.png">
+    <ContentPage.Content>
+
+        <StackLayout Orientation="Vertical">
+
+            <StackLayout BackgroundColor="#1976D2"
+                     HeightRequest="200" Padding="30,0,0,10">
+                <Label Text="{Binding MensagemUsuario}"  VerticalOptions="EndAndExpand"  TextColor="White"
+                            HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            <ListView x:Name="listViewMenu"
+                  SeparatorVisibility="None"
+                  BackgroundColor="#2196f3"
+                  ItemSelected="ListView_ItemSelected"
+                  ItemsSource="{Binding ListaMenu}"
+                  SelectedItem="{Binding ItemSelecionado}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+
+                            <StackLayout VerticalOptions="FillAndExpand"
+                             Orientation="Horizontal"
+                             Padding="20,10,0,10"
+                             Spacing="20">
+
+                                <Image Source="{Binding Icone}"
+                                  Aspect="AspectFit"
+                         VerticalOptions="Center" />
+                                <Label Text="{Binding Texto}" TextColor="White"
+                                VerticalOptions="Center"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
